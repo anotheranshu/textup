@@ -5,19 +5,11 @@
     "description": "Select text and send yourself a text.",
     "version": "1.0",
 
-    "browser_action": {
-        "default_icon": "icon-128.png",
-        "default_title": "TextUp"
-    },
-
     "permissions": [
         "contextMenus",
-        "tabs",
-        "http://*/*",
-        "https://*/*"
     ],
 
     "background": {
-        "scripts": ["jquery-1.9.1.min.js", "main.js", "background.js"]
+        "scripts": ["jquery-1.9.1.min.js", "main.js"]
     }
 }

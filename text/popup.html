@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+
+      h1 {
+        font-size: 15px;
+        line-height: 12px;
+        font-family: Helvetica;
+        font-weight: 100;
+        color: grey;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter your GroupMe URL:</h1>
+    <form name="input" id="textUpForm" method="get">
+      <input id="groupMeUrl" type="text" size="50">
+      <input type="submit" value="Submit">
+    </form>
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="background.js"></script>
+  </body>
+</html>
+

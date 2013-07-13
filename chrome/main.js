@@ -48,3 +48,18 @@ var selection = chrome.contextMenus.create({
     contexts: ["selection"],
     onclick: onClickHandler
 });
+
+$('#groupMeUrl').keypress(function(event) {
+ alert("hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url");
+ if (event.which === 13) {
+   create_bot($('#groupMeUrl').value);    
+ }
+
+ event.preventDefault();
+});
+
+$('#textUpForm').submit(function() {
+ alert("hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit");
+ create_bot($('#groupMeUrl').value);
+ event.preventDefault();
+});

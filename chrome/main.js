@@ -16,7 +16,7 @@ function onClickHandler(info, tab) {
   alert(splits.length);
 
   for (var j = 0; j < splits.length; j++) {
-    $.post("https://api.groupme.com/v3/bots/post", '{"bot_id": "7d2d271d677a378a39b232aab9", "text":"' + splits[j] + '"}');
+    $.post("https://api.groupme.com/v3/bots/post", '{"bot_id": "7d2d271d677a378a39b232aab9", "text":"(' + (j+1) + ') ' + splits[j] + '"}');
   }
   alert(big_string); 
 };

@@ -7,13 +7,7 @@
 
     "permissions": [
         "contextMenus",
-<<<<<<< HEAD
         "storage"
-=======
-         "tabs",
-        "http://*/*",
-        "https://*/*"
->>>>>>> 7227dcea109c72c1c97c0779a594e4f3ae6993d0
     ],
 
     "background": {

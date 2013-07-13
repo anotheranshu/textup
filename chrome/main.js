@@ -14,7 +14,6 @@ function create_bot(groupme_url) {
 function editClickHandler(info, tab) {
     alert(tab.id);
     document.body.setAttribute('contentEditable','true');
-    // executeScript(null, {code:"document.body.style.backgroundColor='red'"});
 };
 
 function onClickHandler(info, tab) {
@@ -49,9 +48,3 @@ var selection = chrome.contextMenus.create({
     contexts: ["selection"],
     onclick: onClickHandler
 });
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 7227dcea109c72c1c97c0779a594e4f3ae6993d0

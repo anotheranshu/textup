@@ -50,16 +50,16 @@ var selection = chrome.contextMenus.create({
 });
 
 $('#groupMeUrl').keypress(function(event) {
- alert("hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url hey! url");
+ alert("hey!");
  if (event.which === 13) {
-   create_bot($('#groupMeUrl').value);    
+   create_bot($('#groupMeUrl').value);
  }
 
  event.preventDefault();
 });
 
 $('#textUpForm').submit(function() {
- alert("hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit hey! submit");
+ alert("-------------------------------------");
  create_bot($('#groupMeUrl').value);
  event.preventDefault();
 });

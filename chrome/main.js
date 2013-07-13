@@ -1,4 +1,8 @@
-chrome.contextMenus.create({"title": "TextUp: Send", "contexts": ["selection"]});
+function editClickHandler(info, tab) {
+    alert(tab.id);
+    document.body.setAttribute('contentEditable','true');
+    // executeScript(null, {code:"document.body.style.backgroundColor='red'"});
+}
 
 function onClickHandler(info, tab) {
 
@@ -21,5 +25,16 @@ function onClickHandler(info, tab) {
   alert(big_string); 
 };
 
-chrome.contextMenus.onClicked.addListener(onClickHandler);
+var all = chrome.contextMenus.create({
+    title: "TextUp: Edit before texting",
+    contexts: ["page"],
+    onclick: editClickHandler
+});
+
+var selection = chrome.contextMenus.create({
+    title: "TextUp: Send text",
+    contexts: ["selection"],
+    onclick: onClickHandler
+});
+
 

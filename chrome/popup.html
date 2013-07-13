@@ -21,7 +21,7 @@
         line-height: 12px;
         font-family: Helvetica;
         font-weight: 100;
-        font-color: #e1e1e1;
+        color: grey;
 
       }
     </style>
@@ -32,14 +32,15 @@
       -
       - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
      -->
-    <script src="main.js"></script>
   </head>
   <body>
     <h1>Enter your GroupMe URL:</h1>
-    <form name="input" action="javascript:create_bot();" method="get">
-    <input id="groupmeurl" type="text" size="50" onkeydown="javascript:if (event.keyCode==13) create_bot();">
+    <form name="input" id="textUpForm" method="get">
+    <input id="groupMeUrl" type="text" size="50">
     <input type="submit" value="Submit">
     </form>
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 

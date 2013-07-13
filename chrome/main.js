@@ -23,3 +23,8 @@ function onClickHandler(info, tab) {
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
+function create_bot(){
+    var url = $("#groupmeurl").val();
+    console.log(url);
+    alert("moo");
+}

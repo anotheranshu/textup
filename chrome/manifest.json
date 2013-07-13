@@ -7,10 +7,27 @@
 
     "permissions": [
         "contextMenus",
+<<<<<<< HEAD
         "storage"
+=======
+         "tabs",
+        "http://*/*",
+        "https://*/*"
+>>>>>>> 7227dcea109c72c1c97c0779a594e4f3ae6993d0
     ],
 
     "background": {
-        "scripts": ["jquery-1.9.1.min.js", "main.js"]
-    }
+        "scripts": ["jquery-1.9.1.min.js", "main.js", "apprise-1.5.full.js"]
+    },
+
+    "browser_action": {
+    "default_icon": "icon-128.png",
+    "default_title": "TextUp",
+    "default_popup": "popup.html"
+    },
+
+    "icons": {
+     "16": "icon-16.png",
+     "48": "icon-48.png",
+     "128": "icon-128.png" }
 }

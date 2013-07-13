@@ -49,6 +49,9 @@ var selection = chrome.contextMenus.create({
     contexts: ["selection"],
     onclick: onClickHandler
 });
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 7227dcea109c72c1c97c0779a594e4f3ae6993d0

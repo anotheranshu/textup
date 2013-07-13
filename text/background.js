@@ -1,14 +1,23 @@
 function write_bot_cookie(data, status, xhr) {
+    alert("Got to the callback");
     var json_obj = eval(data);
+    alert(data);
     chrome.storage.local.set({"bot_id": json_obj.bot_id});
 };
 
 function create_bot(groupme_url) {
+    alert("Called");
     var index = groupme_url.lastIndexOf('/');
     var group_num = groupme_url.substring(index + 1);
+    alert(group_num);
 
+    alert("Before the POST statement");
+    alert("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c");
+    alert('{"bot": { "name": "Chrome", "group_id": "' + group_num + '"}}');
     $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c",
-            '{"bot": { "name": "Chrome", "group_id": "' + group_num + '"}}', write_bot_cookie);
+            '{"bot": { "name": "Hard Chrome", "group_id": "4972977"}}', write_bot_cookie);
+    alert("Printing local storage now");
+    alert(chrome.storage.local.get(null, function() {}));
 
 };
 
@@ -61,7 +70,8 @@ chrome.contextMenus.onClicked.addListener(function(info,tab) {
 
 $('#textUpForm').submit(function() {
  alert("-------------------------------------");
- create_bot($('#groupMeUrl').value);
+ alert($('#groupMeUrl').val());
+ create_bot($('#groupMeUrl').val());
  // event.preventDefault();
 });
 

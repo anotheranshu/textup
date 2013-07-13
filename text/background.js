@@ -7,14 +7,18 @@ function create_bot(groupme_url) {
     var index = groupme_url.lastIndexOf('/');
     var group_num = groupme_url.substring(index + 1);
 
-    $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c", '{"bot": { "name": "Chrome", "group_id": "' + group_num + '"}}', function(data) {
-        alert("hello");
-    });
+    $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c", '{"bot": { "name": "Chrome", "group_id": "' + group_num + '"}}', write_bot_cookie);
 
 };
 
 chrome.browserAction.onClicked.addListener(function(info, tab) {
-    var cookieExists = false;
+    var cookieExists = chrome.storage.local.get("bot_id", function(result) {if result {
+                                                                                return true;
+                                                                              } 
+                                                                              else {
+                                                                                return false;
+                                                                              }
+                                                                              } );
     if (cookieExists) {
         alert("Edit");
         chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
@@ -53,4 +57,9 @@ chrome.contextMenus.onClicked.addListener(function(info,tab) {
   chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
 });
 
+$('#textUpForm').submit(function() {
+ alert("-------------------------------------");
+ create_bot($('#groupMeUrl').value);
+ // event.preventDefault();
+});
 

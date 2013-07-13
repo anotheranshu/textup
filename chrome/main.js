@@ -1,1 +1,1 @@
-chrome.contextMenus.create({"title": "Text", "contexts": ["all"]});
+chrome.contextMenus.create({"title": "Text", "contexts": ["selection"]});

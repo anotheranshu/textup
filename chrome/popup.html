@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+
+      h1 {
+        font-size: 15px;
+        line-height: 12px;
+        font-family: Helvetica;
+        font-weight: 100;
+        font-color: #e1e1e1;
+
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Enter your GroupMe URL:</h1>
+    <form name="input" action="javascript:create_bot();" method="get">
+    <input id="groupmeurl" type="text" size="50" onkeydown="javascript:if (event.keyCode==13) create_bot();">
+    <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+

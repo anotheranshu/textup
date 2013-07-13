@@ -38,3 +38,8 @@ var selection = chrome.contextMenus.create({
 });
 
 
+function create_bot(){
+    var url = $("#groupmeurl").val();
+    console.log(url);
+    alert("moo");
+}

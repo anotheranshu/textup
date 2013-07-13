@@ -36,10 +36,3 @@ var selection = chrome.contextMenus.create({
     contexts: ["selection"],
     onclick: onClickHandler
 });
-
-
-function create_bot(){
-    var url = $("#groupmeurl").val();
-    console.log(url);
-    alert("moo");
-}

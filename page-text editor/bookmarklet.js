@@ -1,0 +1,1 @@
+(function () {if (document.documentElement.contentEditable === false || document.designMode === "off") {alert("off->on");document.body.contentEditable='true';document.designMode='on';void 0;} else if (document.documentElement.contentEditable === true || document.designMode === "on") {alert("on->off");document.body.contentEditable='false';document.designMode='off';void 0;}})();

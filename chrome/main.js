@@ -7,7 +7,7 @@ function create_bot(groupme_url) {
   var index = groupme_url.lastIndexOf('/');
   var group_num = groupme_url.substring(index + 1);
 
-  $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c", '{"bot": { "name": "Chrome", "group_id": "' + group_num + '""}}');
+  $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c", '{"bot": { "name": "Chrome", "group_id": "' + group_num + '"}}');
 
 };
 

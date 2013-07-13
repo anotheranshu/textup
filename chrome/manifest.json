@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+
+    "name": "TextUp",
+    "description": "Select text and send yourself a text.",
+    "version": "1.0",
+
+    "permissions": [
+        "contextMenus"
+    ],
+
+    "background": {
+        "scripts": ["main.js"]
+    }
+}

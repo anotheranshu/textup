@@ -1,8 +1,21 @@
+function write_bot_cookie(data, status, xhr) {
+  var json_obj = eval(data);
+  chrome.storage.local.set({"bot_id": json_obj.bot_id});
+};
+
+function create_bot(groupme_url) {
+  var index = groupme_url.lastIndexOf('/');
+  var group_num = groupme_url.substring(index + 1);
+
+  $.post("https://api.groupme.com/v3/bots?token=6441cfd0cde001306952124c564dcc6c", '{"bot": { "name": "Chrome", "group_id": "' + group_num + '""}}');
+
+};
+
 function editClickHandler(info, tab) {
     alert(tab.id);
     document.body.setAttribute('contentEditable','true');
     // executeScript(null, {code:"document.body.style.backgroundColor='red'"});
-}
+};
 
 function onClickHandler(info, tab) {
 
@@ -20,7 +33,7 @@ function onClickHandler(info, tab) {
   alert(splits.length);
 
   for (var j = 0; j < splits.length; j++) {
-    $.post("https://api.groupme.com/v3/bots/post", '{"bot_id": "7d2d271d677a378a39b232aab9", "text":"(' + (j+1) + ') ' + splits[j] + '"}');
+    $.post("https://api.groupme.com/v3/bots/post", '{"bot_id": "' + chrome.storage.local.get("bot_id") + '", "text":"(' + (j+1) + ') ' + splits[j] + '"}');
   }
   alert(big_string); 
 };
@@ -36,5 +49,6 @@ var selection = chrome.contextMenus.create({
     contexts: ["selection"],
     onclick: onClickHandler
 });
+
 
 
